@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 
 }
 
@@ -16,12 +17,18 @@
 
 }
 
+.current-temp{
+    width: 400px;
+    border-radius: 7px;
+    background-color: #fff;
+}
+
     
     header{
         width: 100% ;
         position: fixed;
         height: 100vh;
-        background: rgba(0, 0, 0, 0.5);
+        
     }
     
     .header-top{
@@ -29,6 +36,8 @@
         background: blue;
     }
     
+
+
     .navegacion{
         width: 90%;
         max-width: 1000px ;
