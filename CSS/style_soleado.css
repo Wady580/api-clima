@@ -7,6 +7,8 @@ box-sizing: border-box;
 header{
     width: 100% ;
     position: fixed;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
 }
 
 .header-top{
@@ -34,5 +36,4 @@ input[type="search"]{
     background: #fff;
     padding: 0 10px;
     padding-bottom: 5px;
-    display: none;
 }
