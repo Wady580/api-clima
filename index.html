@@ -5,14 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Meteorológica</title>
-    <link rel="stylesheet" href="CSS/style_soleado.css">
+    <link rel="stylesheet" href="CSS/style_index.css">
+    <script src="JS/jquery.js"></script>
+	<script src="JS/jquery.dataTables.min.js"></script>
+
 </head>
 
 <header> 
 
-    <div class="hearder-top">
+    <div class="header-top">
+        
         <div class="navegacion">
-            <input type="search" placeholder="Buscar cuidad">
+          <i class="fa-duotone fa-magnifying-glass"></i> 
+          <input type="search" placeholder="Buscar cuidad" id="inputBusqueda">
         </div>
     </div>
     <div class="search" id="search">
@@ -149,12 +154,11 @@
                     <td>Valverde</td>
                 </tr>
             </tbody>
-
-
         </table>
     </div>
 
 </header>
+
 <body>
     
     <div class="container"></div>
@@ -165,5 +169,6 @@
 
 
     <script src="JS/script_ubicacion.js"></script>
+    <script src="JS/buscador.js"></script>
 </body>
 </html>
