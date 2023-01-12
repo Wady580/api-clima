@@ -1,0 +1,28 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+header{
+    width: 100% ;
+    position: fixed;
+}
+
+.header-top{
+    width: 100%;
+    background: blue;
+}
+
+.navegacion{
+    width: 90%;
+    max-width: 1000px ;
+    margin: auto;
+    padding: 12px;
+}
+
+input[type="search"]{
+    padding: 10px;
+    padding-right: 35px;
+    border: none;
+}
