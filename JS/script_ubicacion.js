@@ -42,6 +42,8 @@ window.addEventListener("load", () => {
              });
         
         });
+    }else{
+        alert("Tu navegador no es compatible con el api de geolocalización");
     }
    
 });
