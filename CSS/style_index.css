@@ -63,6 +63,15 @@ tbody tr td:hover{
     color: #423f3f;
 }
 
+
+.container{
+   
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: #43AFFC;
+}
 .current-temp{
     width: 400px;
     border-radius: 7px;
