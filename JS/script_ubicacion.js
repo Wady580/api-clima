@@ -5,6 +5,8 @@ let loc = document.querySelector(".location");
 let summary = document.querySelector(".summary");
 let icon = document.querySelector(".icon");
 const kelvin = 273.15;
+let percentage = document.querySelector(".percentage");
+let feelslike = document.querySelector(".feels-like");
 
 window.addEventListener("load", () => {
      
@@ -43,7 +45,16 @@ window.addEventListener("load", () => {
                }
                summary.textContent = PonerEnMayuscula(data.weather[0].description);
                loc.textContent = data.name + ", " + data.sys.country;
+               percentage.textContent = "%" + data.main.humidity;
+               feelslike.textContent = Math.floor(data.main.feels_like - kelvin) + "°C";
+               var offset = data.timezone;
+               var d = new Date();
+               var utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+               var nd = new Date(utc + (1000 * offset));
 
+               var hour = nd.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit', hour12: true, minute12: true});
+
+               console.log(hour);
 
              });
         

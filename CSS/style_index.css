@@ -23,6 +23,15 @@ header{
 .temperatura {
     font-size: 28px;
 }
+.detalles i{
+     color: #d1fcb5cc;
+    
+}
+
+.feels{
+    padding-right: 50px;
+    border-right: 1px solid #bfbfbf;
+}
 
 .navegacion{
     width: 90%;
@@ -78,7 +87,9 @@ tbody tr td:hover{
     min-height: 100vh;
     justify-content: center;
     align-items: center;
-    background: #43AFFC;
+    background: linear-gradient(135deg, #62b8f5, #4475ef);
+    color: rgba(255, 255, 255, 0.87);
+    text-shadow: 5px rgb(255, 255, 255);
 }
 
 .tit{
@@ -87,7 +98,7 @@ tbody tr td:hover{
     border-bottom: 1px solid #bfbfbf;
     display: flex;
     align-items: center;
-    color: #43AFFC;
+    
     font-size: 21px;
     
 }
@@ -99,10 +110,14 @@ tbody tr td:hover{
 
 .current-temp{
     width: 400px;
-    border-radius: 7px;
-    background-color: #fff;
+    border-radius: 0.6em;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
     padding: 20px 25px 30px;
     line-height: 35px;
+    box-shadow: 0 1.8em 3.7em rgba(3, 46, 87, 0.2);
+
 }
 
 .detalles {
@@ -153,6 +168,7 @@ tbody tr td:hover{
         padding-bottom: 5px;
         max-height: 250px;
         overflow-x: hidden;
+        z-index: 1000;
     }
     
     .search-table{
@@ -172,6 +188,11 @@ tbody tr td:hover{
     
     tbody tr td:hover{
         color: #423f3f;
+    }
+
+   .container i {
+        cursor: pointer;
+        color: #d1fcb5cc;
     }
     
 .dataTables_length, 
