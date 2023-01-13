@@ -12,6 +12,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="JS/jquery.js"></script>
     <script src="JS/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="CSS/rain.css">
 
 
 
@@ -196,5 +197,19 @@
     <script src="JS/script_ubicacion.js"></script>
     <script src="JS/buscador.js"></script>
 </body>
+<script type="text/javascript">
+
+    let hrElement;
+    let counter = 100;
+    for (let i = 0; i < counter; i++) {
+      hrElement = document.createElement("HR");
+      
+        hrElement.style.left = Math.floor(Math.random() * window.innerWidth) + "px";
+        hrElement.style.animationDuration = 0.2 + Math.random() * 0.3 + "s";
+        hrElement.style.animationDelay = Math.random() * 5 + "s";
+     
+      document.body.appendChild(hrElement);
+    }
+  </script>
 
 </html>
