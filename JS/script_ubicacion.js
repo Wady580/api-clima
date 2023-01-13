@@ -35,7 +35,13 @@ window.addEventListener("load", () => {
                console.log(data);
 
                temp.textContent = Math.floor(data.main.temp - kelvin) + "°C";
-               summary.textContent = data.weather[0].description;
+               function PonerEnMayuscula(frase){
+
+                let palabra = frase.split(' ');
+                return palabra.map(p => p[0].toUpperCase() + p.slice(1)).join(' ');
+
+               }
+               summary.textContent = PonerEnMayuscula(data.weather[0].description);
                loc.textContent = data.name + ", " + data.sys.country;
 
 

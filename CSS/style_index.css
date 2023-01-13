@@ -14,14 +14,21 @@ header{
 
 .header-top{
     width: 100%;
-    background: blue;
+    
+}
+.temperatura, .feels-like{
+    font-weight: 600;
+}
+
+.temperatura {
+    font-size: 28px;
 }
 
 .navegacion{
     width: 90%;
     max-width: 1000px ;
     margin: auto;
-    padding: 12px;
+    padding: 12px 0px 0px 0px;
 }
 
 
@@ -29,7 +36,8 @@ input[type="search"]{
     padding: 10px;
     padding-right: 35px;
     border: none;
-    border-radius: 15px;
+   
+    
 }
 
 .search{
@@ -65,19 +73,54 @@ tbody tr td:hover{
 
 
 .container{
-   
+    
     display: flex;
     min-height: 100vh;
     justify-content: center;
     align-items: center;
     background: #43AFFC;
 }
+
+.tit{
+    font-weight: 500;
+    padding: 16px 15px;
+    border-bottom: 1px solid #bfbfbf;
+    display: flex;
+    align-items: center;
+    color: #43AFFC;
+    font-size: 21px;
+    
+}
+
+#tit2{
+    margin-right: 10px;
+    font-size: 28px;
+}
+
 .current-temp{
     width: 400px;
     border-radius: 7px;
     background-color: #fff;
+    padding: 20px 25px 30px;
+    line-height: 35px;
 }
 
+.detalles {
+   
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #bfbfbf;
+    padding-top: 20px;
+}
+
+.inf-part{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
     
     header{
         width: 100% ;
@@ -88,22 +131,17 @@ tbody tr td:hover{
     
     .header-top{
         width: 100%;
-        background: blue;
+        
     }
     
 
 
-    .navegacion{
-        width: 90%;
-        max-width: 1000px ;
-        margin: auto;
-        padding: 12px;
-    }
     
     input[type="search"]{
         padding: 10px;
         padding-right: 35px;
-        border: none;
+        border: 1.5px solid #bfbfbf !important;
+        outline: none;
     }
     
     .search{
@@ -113,7 +151,7 @@ tbody tr td:hover{
         background: #fff;
         padding: 0 10px;
         padding-bottom: 5px;
-        max-height: 85%;
+        max-height: 250px;
         overflow-x: hidden;
     }
     
