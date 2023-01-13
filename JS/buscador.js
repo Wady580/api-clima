@@ -10,7 +10,7 @@ $("#inputBusqueda").keyup(function(){
 
     if ($("#inputBusqueda").val() == ""){
         $("header"). css({
-            "height": "auto",
+            "height": "40px !important",
             "background": "none"
             }) 
 
