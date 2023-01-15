@@ -4,17 +4,18 @@
 }
 
 body {
-    background-image: linear-gradient(to bottom, #030420, #000000 70%);
+    /* background-image: linear-gradient(to bottom, #030420, #000000 70%); */
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
+    /* width: 100vw;
+    height: 100vh; */
     overflow: hidden;
 }
 
   
 hr {
+    z-index: 1;
     width: 50px;
     border-color: transparent;
     border-right-color: rgba(255, 255, 255, 0.7);
@@ -23,7 +24,7 @@ hr {
     bottom: 100%;
     transform-origin: 100% 50%;
     animation-name: rain;
-    animation-duration: 1s;
+    animation-duration: 3s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
@@ -33,6 +34,6 @@ hr {
       transform: rotate(105deg) translateX(0);
     } 
     to {
-      transform: rotate(105deg) translateX(calc(100vh + 20px));
+      transform: rotate(105deg) translateX(calc(100vh + 2px));
     }
 }
