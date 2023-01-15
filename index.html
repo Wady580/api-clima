@@ -6,167 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Meteorológica</title>
+
+    <link rel="stylesheet" href="CSS/sol.css">
     <link rel="stylesheet" href="CSS/style_index.css">
     <script src="https://kit.fontawesome.com/669aa46b77.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="JS/jquery.js"></script>
     <script src="JS/jquery.dataTables.min.js"></script>
-    <link rel="stylesheet" href="CSS/rain.css">
-
-
-
+    <script src="https://cdn.jsdelivr.net/npm/suncalc@1.8.0/suncalc.min.js"></script>
+    
 </head>
-
 <header>
 
-    <div class="header-top">
-        <div class="navegacion">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="search" placeholder="Buscar cuidad" id="inputBusqueda">
-        </div>
-
-        <div class="search" id="search">
-            <table class="search-table" id="searchTable">
-                <thead>
-                    <tr>
-                        <td></td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Azúa</td>
-                    </tr>
-
-                    <tr>
-                        <td>Baoruco</td>
-                    </tr>
-
-                    <tr>
-                        <td>Barahona</td>
-                    </tr>
-
-                    <tr>
-                        <td>Dajabón</td>
-                    </tr>
-
-                    <tr>
-                        <td>Distrito Nacional</td>
-                    </tr>
-
-                    <tr>
-                        <td>Duarte</td>
-                    </tr>
-
-                    <tr>
-                        <td>Elías Pina</td>
-                    </tr>
-
-                    <tr>
-                        <td>El Seibo</td>
-                    </tr>
-
-                    <tr>
-                        <td>Espaillat</td>
-                    </tr>
-
-                    <tr>
-                        <td>Hato Mayor</td>
-                    </tr>
-
-                    <tr>
-                        <td>Independencia</td>
-                    </tr>
-
-                    <tr>
-                        <td>La Altagracia</td>
-                    </tr>
-
-                    <tr>
-                        <td>La Romana</td>
-                    </tr>
-
-                    <tr>
-                        <td>La Vega</td>
-                    </tr>
-
-                    <tr>
-                        <td>Maria Trinidad Sanchez</td>
-                    </tr>
-
-                    <tr>
-                        <td>Monseñor Nouel</td>
-                    </tr>
-
-                    <tr>
-                        <td>Monte Cristi</td>
-                    </tr>
-
-                    <tr>
-                        <td>Monte Plata</td>
-                    </tr>
-
-                    <tr>
-                        <td>Pedernales</td>
-                    </tr>
-
-                    <tr>
-                        <td>Peravia</td>
-                    </tr>
-
-                    <tr>
-                        <td>Puerto Plata</td>
-                    </tr>
-
-                    <tr>
-                        <td>Salcedo</td>
-                    </tr>
-
-                    <tr>
-                        <td>Samana</td>
-                    </tr>
-
-                    <tr>
-                        <td>Sánchez Ramírez</td>
-                    </tr>
-
-                    <tr>
-                        <td>San Cristobal</td>
-                    </tr>
-                    <td>San Jose de Ocoa</td>
-                    </tr>
-
-                    <tr>
-                        <td>San Juan</td>
-                    </tr>
-
-                    <tr>
-                        <td> San Pedro de Macorís</td>
-                    </tr>
-
-                    <tr>
-                        <td>Santiago</td>
-                    </tr>
-
-                    <tr>
-                        <td>Santiago Rodríguez</td>
-                    </tr>
-
-                    <tr>
-                        <td>Santo Domingo</td>
-                    </tr>
-
-                    <tr>
-                        <td>Valverde</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-
 </header>
-
 <body>
 
     <div class="container">
@@ -176,7 +29,7 @@
 
             <div class="inf-part">
                 <br>
-                <div class="icon" style="max-width: 50px;">---</div>
+                <img src="IMG/image-removebg-preview.png" style="max-width: 125px;"></img><br>
                 <div class="tempe">  <p class="temperatura" style="display: inline;">-°C</p> </div>
                 <div class="loc">  <p class="location" style="display: inline;">---</p> </div>
                 <div class="summary">---</div>
@@ -191,23 +44,23 @@
 
     </div>
 
-
+    <div class="sun">
+        <div class="ray_box">
+            <div class="ray ray1"></div>
+            <div class="ray ray2"></div>
+            <div class="ray ray3"></div>
+            <div class="ray ray4"></div>
+            <div class="ray ray5"></div>
+            <div class="ray ray6"></div>
+            <div class="ray ray7"></div>
+            <div class="ray ray8"></div>
+            <div class="ray ray9"></div>
+            <div class="ray ray10"></div>
+        </div>
+    </div>
     <script src="JS/script_ubicacion.js"></script>
-    <script src="JS/buscador.js"></script>
+   
 </body>
-<script type="text/javascript">
 
-    let hrElement;
-    let counter = 100;
-    for (let i = 0; i < counter; i++) {
-      hrElement = document.createElement("HR");
-      
-        hrElement.style.left = Math.floor(Math.random() * window.innerWidth) + "px";
-        hrElement.style.animationDuration = 0.2 + Math.random() * 0.3 + "s";
-        hrElement.style.animationDelay = Math.random() * 5 + "s";
-     
-      document.body.appendChild(hrElement);
-    }
-  </script>
 
 </html>

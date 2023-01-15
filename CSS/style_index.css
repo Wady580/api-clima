@@ -6,16 +6,7 @@ box-sizing: border-box;
 font-family: 'Poppins', sans-serif;
 }
 
-header{
-    width: 100% ;
-    position: fixed;
-}
 
-
-.header-top{
-    width: 100%;
-    
-}
 .temperatura, .feels-like{
     font-weight: 600;
 }
@@ -83,10 +74,12 @@ tbody tr td:hover{
 
 .container{
     
+    z-index: 10;
     display: flex;
     min-height: 100vh;
     justify-content: center;
     align-items: center;
+    position: relative;
     /* background: linear-gradient(135deg, #62b8f5, #4475ef); */
     color: rgba(255, 255, 255, 0.87);
     text-shadow: 5px rgb(255, 255, 255);
@@ -140,7 +133,7 @@ tbody tr td:hover{
     header{
         width: 100% ;
         position: fixed;
-        height: 100vh;
+        
         
     }
     
