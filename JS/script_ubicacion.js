@@ -11,7 +11,7 @@ let feelslike = document.querySelector(".feels-like");
 
 window.addEventListener("load", () => {
 
-  if (navigator.geolocation) {
+  if(navigator.geolocation) {
 
     navigator.geolocation.getCurrentPosition((position) => {
 
@@ -96,11 +96,15 @@ window.addEventListener("load", () => {
               sun.style.height = '140px';
               const sunPosition = SunCalc.getPosition(date_sun, lat, lon);
               sun.style.transform = 'rotate('+sunPosition.azimuth+'rad)';
-              sun.style.left = Math.pow(sunPosition.azimuth,15)+'vh';
-
+              sun.style.left = Math.pow(sunPosition.azimuth+2.5, 4)*2 + sunPosition.altitude+'vh';
+              sun.style.background = '#fff7dc';
+              //console.log(sunPosition);
               
             }
             ActSol();
+            setInterval(() => {
+              ActSol();
+            }, 60000);
 
           } else {
             // Night time
@@ -116,7 +120,7 @@ window.addEventListener("load", () => {
               const moon = document.querySelector('.sun');
           
               moon.style.transform = 'rotate('+moonPosition.azimuth+'rad)';
-              moon.style.left = Math.pow(moonPosition.azimuth,15)+'vh';
+              moon.style.left = Math.pow(moonPosition.azimuth+2.9, 3)*2 + moonPosition.altitude+'vh';
               moon.style.opacity = illumination.fraction;
               console.log(moonPosition);
             }
@@ -138,11 +142,11 @@ window.addEventListener("load", () => {
           switch (true) {
             case (weatherId >= 200 && weatherId < 299):
               // Thunderstorm
-              document.body.style.backgroundImage = "url('thunderstorm.jpg')";
+        
               break;
             case (weatherId >= 300 && weatherId < 400):
               // Drizzle
-              document.body.style.backgroundImage = "url('drizzle.jpg')";
+             
               break;
             case (weatherId >= 500 && weatherId < 599):
               // Rain
@@ -159,15 +163,15 @@ window.addEventListener("load", () => {
               break;
             case (weatherId >= 600 && weatherId < 699):
               // Snow
-              document.body.style.backgroundImage = "url('snow.jpg')";
+            
               break;
             case (weatherId >= 700 && weatherId < 799):
               // Atmosphere
-              document.body.style.backgroundImage = "url('atmosphere.jpg')";
+            
               break;
             case (weatherId === 800):
               // Clear
-              document.body.style.backgroundImage = "url('clear-sky.jpg')";
+              //document.body.style.backgroundImage = "url('clear-sky.jpg')";
               break;
             case (weatherId > 800 && weatherId < 900):
               // Clouds

@@ -83,6 +83,7 @@ tbody tr td:hover{
     /* background: linear-gradient(135deg, #62b8f5, #4475ef); */
     color: rgba(255, 255, 255, 0.87);
     text-shadow: 5px rgb(255, 255, 255);
+    overflow-x: hidden;
 }
 
 .tit{
