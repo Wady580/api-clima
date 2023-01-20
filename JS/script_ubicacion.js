@@ -83,7 +83,7 @@ window.addEventListener("load", () => {
             var time_act =  hours + ":" + minutes;
 
            
-          if (hours >= 6 && hours < 18) {
+          if (hours == 1) {
             // Day time
 
             console.log(hours);
@@ -109,20 +109,61 @@ window.addEventListener("load", () => {
           } else {
             // Night time
             console.log(hours);
-            document.body.style.backgroundImage = 'linear-gradient(to bottom, #030420, #000000 70%)';
+            // let script_night = document.createElement("script");
+            // script_night.setAttribute("src", "JS/script_night.js");
+            // document.body.appendChild(script_night);
+            // document.body.style.backgroundImage = 'linear-gradient(to bottom, #030420, #000000 70%)';
+            $('.sun').remove();
             
-          
+
+            let div_night = document.createElement("div");
+            div_constelacion.setAttribute("class", "noite");
+            document.body.appendChild(div_night);
+
+
+            let div_constelacion = document.createElement("div");
+            div_constelacion.setAttribute("class", "constelacao");
+            document.body.appendChild(div_constelacion);
+            
+
+            let div_lua = document.createElement("div");
+            div_lua.setAttribute("class", "lua");
+            document.body.appendChild(div_lua);
+
+            let div_c = document.querySelector('.lua');
+            div_c.innerHTML = '<div class="textura"></div>';
+
+            let div_meteor = document.createElement("div");
+            div_meteor.setAttribute("class", "chuvaMetoro");
+            document.body.appendChild(div_meteor);
+
+            let css_night = document.createElement("link");
+            css_night.setAttribute("rel", "stylesheet");
+            css_night.setAttribute("type", "text/css");
+            css_night.setAttribute("href", "CSS/night.css");
+            document.head.appendChild(css_night); 
+
+            let script_night = document.createElement("script");
+            script_night.setAttribute("type", "text/javascript");
+            script_night.setAttribute("src","JS/script_night.js");
+            document.body.appendChild(script_night);
+
+
+         
+
+            
+           
             function ActLuna() {
-              const date_moon = new Date();
-              const moonPosition = SunCalc.getMoonPosition(date_moon, lat, lon);
-              var illumination = SunCalc.getMoonIllumination(date_moon);
+              // const date_moon = new Date();
+              // const moonPosition = SunCalc.getMoonPosition(date_moon, lat, lon);
+              // var illumination = SunCalc.getMoonIllumination(date_moon);
           
-              const moon = document.querySelector('.sun');
+              // const moon = document.querySelector('.sun');
           
-              moon.style.transform = 'rotate('+moonPosition.azimuth+'rad)';
-              moon.style.left = Math.pow(moonPosition.azimuth+2.9, 3)*2 + moonPosition.altitude+'vh';
-              moon.style.opacity = illumination.fraction;
-              console.log(moonPosition);
+              // moon.style.transform = 'rotate('+moonPosition.azimuth+'rad)';
+              // moon.style.left = Math.pow(moonPosition.azimuth+2.9, 3)*2 + moonPosition.altitude+'vh';
+              // moon.style.opacity = illumination.fraction;
+              // console.log(moonPosition);
             }
             ActLuna();
             setInterval(() => {

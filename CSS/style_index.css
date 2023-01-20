@@ -6,6 +6,14 @@ box-sizing: border-box;
 font-family: 'Poppins', sans-serif;
 }
 
+html, body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
 
 .temperatura, .feels-like{
     font-weight: 600;
@@ -72,7 +80,7 @@ tbody tr td:hover{
 }
 
 
-.container{
+body{
     
     z-index: 10;
     display: flex;
